@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "815390201342",
+    "project_id": "tixclock",
+    "storage_bucket": "tixclock.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:815390201342:android:2a36733baa64e42e6f5caf",
+        "android_client_info": {
+          "package_name": "com.clock.tix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "815390201342-ls0ls506uig2ju2nhddv0fdjolnnjitp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJDV5huQs5AFXzbf2XqiAFiG49thH-HwI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "815390201342-ls0ls506uig2ju2nhddv0fdjolnnjitp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

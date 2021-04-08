@@ -1,90 +1,40 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
-import 'package:tix/cubes.dart';
+import 'package:get/get.dart';
+import 'package:tix/clockBlock.dart';
+import 'package:tix/controller/selectController.dart';
 
-class Clock extends StatefulWidget {
+class Clock extends StatelessWidget {
   Clock({Key key}) : super(key: key);
+  final selectController = Get.put(SelectController());
 
-  @override
-  _ClockState createState() => _ClockState();
-}
-
-class _ClockState extends State<Clock> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Container(
-        child: Row(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
+            Row(
               children: [
-                Cube(),
-                Cube(),
-                Cube(),
+                ElevatedButton(
+                  onPressed: () {
+                    selectController.clear();
+                  },
+                  child: Text("Clear"),
+                ),
+                Spacer(),
+                ElevatedButton(
+                  onPressed: () {
+                    selectController.selectAll();
+                  },
+                  child: Text("Select All"),
+                ),
               ],
             ),
-            Spacer(),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Row(children: [
-                  Cube(),
-                  Cube(),
-                  Cube(),
-                ]),
-                Row(children: [
-                  Cube(),
-                  Cube(),
-                  Cube(),
-                ]),
-                Row(children: [
-                  Cube(),
-                  Cube(),
-                  Cube(),
-                ]),
-              ],
-            ),
-            Spacer(),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Row(children: [
-                  Cube(),
-                  Cube(),
-                  Cube(),
-                ]),
-                Row(children: [
-                  Cube(),
-                  Cube(),
-                  Cube(),
-                ]),
-              ],
-            ),
-            Spacer(),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Row(children: [
-                  Cube(),
-                  Cube(),
-                  Cube(),
-                ]),
-                Row(children: [
-                  Cube(),
-                  Cube(),
-                  Cube(),
-                ]),
-                Row(children: [
-                  Cube(),
-                  Cube(),
-                  Cube(),
-                ]),
-              ],
-            ),
+            ClockBlock(),
           ],
         ),
       ),
