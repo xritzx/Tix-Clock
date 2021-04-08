@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tix/controller/colorController.dart';
 import 'package:tix/controller/selectController.dart';
 import 'package:get/get.dart';
 
@@ -7,11 +6,9 @@ class Cube extends StatelessWidget {
   final int id;
   Cube(this.id, {Key key}) : super(key: key);
 
-  final isSelected = false.obs;
-  final color = Colors.red.obs;
-
-  final colorController = Get.put(ColorController());
   final selectController = Get.put(SelectController());
+
+  final isSelected = false.obs;
 
   @override
   Widget build(BuildContext context) {
@@ -26,31 +23,32 @@ class Cube extends StatelessWidget {
             height: 60,
             child: Container(
               decoration: BoxDecoration(
-                color: selectController.cubes[id] ? Colors.blue : Colors.red,
+                color: selectController.cubeColors[id],
                 border: Border.all(
-                  color:
-                      selectController.cubes[id] ? Colors.white : color.value,
-                  width: 2,
+                  color: selectController.cubes[id]
+                      ? Colors.white
+                      : Colors.white54,
+                  width: 1,
                 ),
                 boxShadow: selectController.cubes[id]
                     ? [
                         BoxShadow(
                           color: selectController.cubes[id]
-                              ? Colors.blue
-                              : Colors.red,
+                              ? Colors.white54
+                              : selectController.cubeColors[id],
                           spreadRadius: 4,
-                          blurRadius: 3,
+                          blurRadius: 4,
                         ),
                       ]
                     : [],
                 borderRadius: BorderRadius.circular(10),
               ),
               margin: EdgeInsets.all(5),
-              child: Center(
-                child: Text(
-                  this.id.toString(),
-                ),
-              ),
+              // child: Center(
+              //   child: Text(
+              //     this.id.toString(),
+              //   ),
+              // ),
             ),
           ),
         );
