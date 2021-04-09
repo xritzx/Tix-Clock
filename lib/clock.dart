@@ -6,6 +6,7 @@ import 'package:tix/controller/selectController.dart';
 
 class Clock extends StatelessWidget {
   Clock({Key key}) : super(key: key);
+
   final selectController = Get.put(SelectController());
 
   @override
