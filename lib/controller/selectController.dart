@@ -6,6 +6,7 @@ class SelectController extends GetxController {
   final FirebaseService _firebaseService =
       Get.put<FirebaseService>(FirebaseService());
 
+  Rx<bool> isLoading = true.obs;
   List<bool> cubes = List<bool>.filled(27, false, growable: false).obs;
   List<Color> cubeColors =
       List<Color>.filled(27, Colors.grey, growable: false).obs;
@@ -20,8 +21,10 @@ class SelectController extends GetxController {
 
   @override
   void onInit() async {
-    cubeColors = (await _firebaseService.fetchColorList()).obs;
     super.onInit();
+    // Assign all is reactive whereas assigning with = operator is not
+    cubeColors.assignAll(await _firebaseService.fetchColorList());
+    this.isLoading.value = false;
   }
 
   void changeColor(Color _color) {

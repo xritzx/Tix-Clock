@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_colorpicker/flutter_colorpicker.dart';
 import 'package:get/get.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
+
 import 'package:tix/clockBlock.dart';
 import 'package:tix/controller/selectController.dart';
 
@@ -72,7 +74,19 @@ class Clock extends StatelessWidget {
                 ),
               ],
             ),
-            ClockBlock(),
+            Obx(
+              () => selectController.isLoading.value
+                  ? Center(
+                      child: SizedBox(
+                        height: Get.height * 0.44,
+                        child: SpinKitPouringHourglass(
+                          color: Colors.white,
+                          size: 40.0,
+                        ),
+                      ),
+                    )
+                  : ClockBlock(),
+            )
           ],
         ),
       ),
