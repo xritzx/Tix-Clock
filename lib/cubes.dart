@@ -44,6 +44,7 @@ class Cube extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10),
               ),
               margin: EdgeInsets.all(5),
+              child: Center(child: Text(id.toString())),
             ),
           ),
         );

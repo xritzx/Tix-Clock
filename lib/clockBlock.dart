@@ -8,6 +8,7 @@ class ClockBlock extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
+        Spacer(),
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -46,12 +47,14 @@ class ClockBlock extends StatelessWidget {
           children: [
             Row(children: [
               Cube(12),
-              Cube(13),
-              Cube(14),
+              Cube(15),
             ]),
             Row(children: [
-              Cube(15),
+              Cube(13),
               Cube(16),
+            ]),
+            Row(children: [
+              Cube(14),
               Cube(17),
             ]),
           ],
@@ -78,6 +81,7 @@ class ClockBlock extends StatelessWidget {
             ]),
           ],
         ),
+        Spacer(),
       ],
     );
   }
