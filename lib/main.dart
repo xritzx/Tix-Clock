@@ -8,8 +8,7 @@ import 'package:tix/clock.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations([
-    DeviceOrientation.landscapeLeft,
-    DeviceOrientation.landscapeRight,
+    DeviceOrientation.portraitUp,
   ]).then((_) {
     runApp(Tix());
   });
@@ -20,6 +19,7 @@ class Tix extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       theme: darkTheme,
+      debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.light,
       home: Scaffold(
         appBar: AppBar(
