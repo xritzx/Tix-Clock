@@ -1,6 +1,7 @@
 # tix
 
 A new Flutter project.
+View it here -> https://www.youtube.com/watch?v=49Kh6b01fRQ
 
 ## Getting Started
 
