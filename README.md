@@ -1,17 +1,9 @@
-# tix
+# Tix Clock
 
-A new Flutter project.
 View it here -> https://www.youtube.com/watch?v=49Kh6b01fRQ
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This project uses esp8266 and Neopixels RGB leds for making a single data lien controlled TIX CLOCK that fetches time the NTP server once on boot, stores and maintains it in the RTC Module, colors of every individual pixels can be changed/controlled via Firebase using a Flutter App
+Project and App Demo
+![4b04de86-6713-468e-b449-880afe5fca3b](https://user-images.githubusercontent.com/30374459/123506719-56c8eb80-d683-11eb-8954-c2001f640e3e.jpg)
+![IMG_2051](https://user-images.githubusercontent.com/30374459/123506723-592b4580-d683-11eb-9612-dabfe42121aa.jpeg)
+![IMG_2069](https://user-images.githubusercontent.com/30374459/123506730-5deff980-d683-11eb-9b80-c5ee0a321ab3.jpeg)
